@@ -150,6 +150,9 @@
   &__item {
     &:not(:last-child) {
       margin-right: 2.5rem;
+       @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+      }
     }
   }
 
