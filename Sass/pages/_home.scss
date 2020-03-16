@@ -37,6 +37,16 @@
     @media only screen and (max-width: $bp-medium) {
       width: 22rem;
     }
+    @media only screen and (max-width: $bp-small) {
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 45rem;
+      min-width: 42rem;
+    }
+    @media only screen and (max-width: 320px) {
+      height: 40rem;
+    }
   }
 
   &__form {
@@ -150,7 +160,7 @@
   &__item {
     &:not(:last-child) {
       margin-right: 2.5rem;
-       @media only screen and (max-width: $bp-small) {
+      @media only screen and (max-width: $bp-medium) {
         margin-right: 0;
       }
     }
@@ -179,10 +189,15 @@
 
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     margin-top: 6rem;
+    justify-items: center;
+
     @media only screen and (max-width: 62.5em) {
       grid-gap: 2rem;
       -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     }
   }
 
@@ -192,6 +207,10 @@
     height: 35rem;
     // box-shadow: 0px 6px 12px $color-grey-light;
     border-radius: 8px;
+    @media only screen and (max-width: $bp-smallest) {
+      width: 18rem;
+      height: 28rem;
+    }
   }
 }
 
@@ -202,7 +221,7 @@
     url("Images/Home/theater-background.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -219,6 +238,12 @@
     color: #fff;
     margin: 3rem 0;
     font-weight: $font-regular;
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 0.8rem 0;
+    }
+    @media only screen and (max-width: 320px) {
+      margin: 0.3rem 0;
+    }
   }
 }
 
@@ -249,6 +274,9 @@
     @media only screen and (max-width: $bp-small) {
       width: 50%;
       text-align: start;
+    }
+    @media only screen and (max-width: 320px) {
+      width: 60%;
     }
 
     &__cont {
@@ -381,9 +409,13 @@
       justify-items: center;
       margin: 4rem 0;
       grid-row-gap: 2rem;
+      justify-items: center;
       // &:last-child {
       //   grid-column: 1/-1;
       // }
+    }
+    @media only screen and (max-width: 320px) {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
   }
 
